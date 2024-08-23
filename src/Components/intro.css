@@ -1,0 +1,66 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    transition: transform 0.7s ease-in-out;
+  }
+  
+  /* Intro Page */
+  .intro-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #6fddda;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: transform 0.7s ease-in-out;
+  }
+  
+  .intro-content {
+    text-align: center;
+  }
+  
+  .intro-page h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .intro-icon {
+    font-size: 2rem;
+    margin-top: 1rem;
+    animation: bounce 1.5s infinite;
+  }
+  
+  .intro-page p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  /* Slide the intro page out when transitioning */
+  .app.show-counter .intro-page {
+    transform: translateX(-100%);
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+  }
+  
